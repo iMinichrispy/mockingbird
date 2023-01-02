@@ -27,12 +27,7 @@ struct InvocationRecord {
     case value(InvocationRecord)
     case error(TestFailure)
   }
-  private(set) var result: Result? {
-    didSet {
-      MKBThrowException(Constants.resultSentinel)
-    }
-  }
-  
+  private(set) var result: Result?
   private(set) var facadeValues = [Int: Any?]()
   private(set) var argumentIndex: Int?
   
